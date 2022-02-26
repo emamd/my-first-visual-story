@@ -1,4 +1,12 @@
-{% extends '_layouts/base.html' %}
+{% extends 'base.html' %}
+
+{% block styles -%}
+<link rel="stylesheet" href="{% static 'styles/app.scss' %}">
+{% endblock styles -%}
+
+{% block scripts -%}
+{% script 'app' %}
+{% endblock scripts -%}
 
 {% block headline %}My headline will go here{% endblock %}
 {% block byline %}By me{% endblock %}
@@ -11,4 +19,3 @@
     {{ obj.first_name }} {{ obj.last_name }}<br>
   {% endfor %}
 {% endblock %}
-
